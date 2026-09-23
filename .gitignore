@@ -1,0 +1,119 @@
+# ============================================================
+# CBAM Exposure Analytics - .gitignore
+# ============================================================
+
+# -------------------------
+# Python
+# -------------------------
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# Virtual environments
+venv/
+.venv/
+env/
+ENV/
+
+# Python packaging
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# -------------------------
+# Environment & Secrets
+# -------------------------
+.env
+.env.*
+!.env.example
+
+# dbt credentials
+profiles.yml
+*.key
+*.pem
+
+# -------------------------
+# Raw Data
+# -------------------------
+# Raw/source datasets may be large, copyrighted,
+# or downloaded from external sources.
+data/raw/*
+!data/raw/.gitkeep
+
+# -------------------------
+# Processed / Generated Data
+# -------------------------
+data/processed/*
+!data/processed/.gitkeep
+
+# -------------------------
+# DuckDB / Databases
+# -------------------------
+*.duckdb
+*.duckdb.wal
+*.db
+*.sqlite
+*.sqlite3
+
+# -------------------------
+# Jupyter
+# -------------------------
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+
+# -------------------------
+# dbt
+# -------------------------
+dbt_cbam/target/
+dbt_cbam/dbt_packages/
+dbt_cbam/logs/
+dbt_cbam/.user.yml
+
+# -------------------------
+# Logs
+# -------------------------
+*.log
+logs/
+
+# -------------------------
+# OS files
+# -------------------------
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# -------------------------
+# IDEs / Editors
+# -------------------------
+.vscode/*
+!.vscode/settings.json
+!.vscode/extensions.json
+
+.idea/
+*.swp
+*.swo
+
+# -------------------------
+# Power BI temporary files
+# -------------------------
+*.pbi[ae]x
+*.tmp
+
+# Keep the actual PBIX if you intentionally
+# want it version-controlled.
+# -------------------------
+
+# -------------------------
+# Temporary / Backup files
+# -------------------------
+*.bak
+*.backup
+*.tmp
+*~
